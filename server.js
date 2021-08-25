@@ -13,7 +13,7 @@ app.use(express.static('public'));
 app.get('/', (req, res) => res.sendFile(__dirname + '/views/index.html'));
 
 // Handle returning a timestamp
-app.get('/api/timestamp/:date?', (req, res) => {
+app.get('/api/:date?', (req, res) => {
     // Store our date response. This will default to the current datetime
     let date = new Date();
 
